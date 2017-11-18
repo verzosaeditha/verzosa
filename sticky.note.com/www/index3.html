@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<body bgcolor="green">
+
+
+			<a href="index2.html"><button id="back" name="Back">Back</button></a>
+			<CENTER><h1>STICKY NOTE</h1></CENTER>
+
+			<script>
+			function addNote()
+			{
+				window.localStorage['sticky note']= document.getElementById("sticky note").value;
+
+				var sticky note = document.getElementById("sticky note").value;
+				var js = document.createElement('js');
+				js.innerText = sticky note;
+				document.getElementById("comments").appendChild(js);
+				document.getElementById("sticky note").value = ' ';
+				document.getElementById("sticky note").focus();
+
+			}
+			function pull(){
+				document.getElementById("sticky note").value=window.localStorage[ 'sticky note' ]
+
+
+			}
+				</script>
+				<CENTER><textare id="sticky note" cols=85 rows=75 placeholder="Enter Title:"></textarea></CENTER>
+				<br>
+				<center><button type="button" onclick="pull()">pull btn</button></center><br><br>
+				<CENTER><input type="submit" name="Save" id="sticky note" onclick="addNote()">
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+				<button id="sticky note" name="Cancel">Cancel</button></CENTER>
+
+
+		</body>
+		</html>
